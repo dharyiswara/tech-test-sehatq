@@ -31,6 +31,9 @@
         <activity
             android:name=".ui.history.PurchaseHistoryActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

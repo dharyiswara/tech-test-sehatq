@@ -27,7 +27,13 @@ class ProductAdapter(private val listener: (ProductPromo) -> Unit) :
         holder.bind(productList[position])
     }
 
+    fun addData(list: List<ProductPromo>) {
+        productList.addAll(list)
+        notifyDataSetChanged()
+    }
+
     fun replaceData(list: List<ProductPromo>) {
+        productList.clear()
         productList.addAll(list)
         notifyDataSetChanged()
     }

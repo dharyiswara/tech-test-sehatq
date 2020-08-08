@@ -32,7 +32,7 @@ class PurchaseHistoryActivity : BaseActivity() {
             layoutManager = LinearLayoutManager(this@PurchaseHistoryActivity)
             adapter = productAdapter
         }
-        productAdapter.replaceData(product)
+        productAdapter.addData(product)
     }
 
     override fun initEvent() {

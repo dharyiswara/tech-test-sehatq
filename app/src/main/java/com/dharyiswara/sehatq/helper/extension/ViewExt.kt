@@ -1,7 +1,9 @@
 package com.dharyiswara.sehatq.helper.extension
 
+import android.content.Context
 import android.graphics.drawable.Drawable
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
@@ -31,4 +33,9 @@ fun ImageView.loadFromUrl(
         .error(placeHolder)
         .apply(options)
         .into(this)
+}
+
+fun View.hideKeyboard() {
+    val imm: InputMethodManager by lazy { this.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager }
+    imm.hideSoftInputFromWindow(windowToken, 0)
 }

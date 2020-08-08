@@ -10,6 +10,7 @@ import com.dharyiswara.sehatq.model.Homepage
 import com.dharyiswara.sehatq.ui.detail.DetailProductActivity
 import com.dharyiswara.sehatq.ui.main.home.adapter.CategoryAdapter
 import com.dharyiswara.sehatq.ui.main.home.adapter.ProductHomeAdapter
+import com.dharyiswara.sehatq.ui.search.SearchActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
@@ -62,7 +63,9 @@ class HomeFragment : BaseFragment() {
         etSearch.setOnTouchListener { _, event ->
             if (event?.action == MotionEvent.ACTION_DOWN) {
                 if (!swHome.isRefreshing)
-                    toast("Go To Search")
+                    startActivity<SearchActivity>(
+                        SearchActivity.LIST_DATA to productAdapter.getProductList()
+                    )
             }
             false
         }
