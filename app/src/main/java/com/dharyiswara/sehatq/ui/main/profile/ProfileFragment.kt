@@ -7,11 +7,11 @@ import com.dharyiswara.sehatq.helper.LogoutHelper
 import com.dharyiswara.sehatq.helper.base.BaseFragment
 import com.dharyiswara.sehatq.helper.extension.loadFromUrl
 import com.dharyiswara.sehatq.preferences.UserSession
+import com.dharyiswara.sehatq.ui.history.PurchaseHistoryActivity
 import com.dharyiswara.sehatq.ui.login.LoginActivity
 import io.realm.Realm
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.jetbrains.anko.support.v4.startActivity
-import org.jetbrains.anko.support.v4.toast
 import org.koin.android.ext.android.inject
 
 class ProfileFragment : BaseFragment() {
@@ -40,7 +40,7 @@ class ProfileFragment : BaseFragment() {
     override fun initEvent() {
         super.initEvent()
         tvPurchasedHistory.setOnClickListener {
-            toast("Go To History Page")
+            startActivity<PurchaseHistoryActivity>()
         }
         tvLogout.setOnClickListener {
             logoutHelper.logout()
