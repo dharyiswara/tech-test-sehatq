@@ -1,7 +1,8 @@
-package com.dharyiswara.sehatq
+package com.dharyiswara.sehatq.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.dharyiswara.sehatq.R
 
 class MainActivity : AppCompatActivity() {
 
