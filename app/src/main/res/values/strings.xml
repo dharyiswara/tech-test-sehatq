@@ -23,4 +23,6 @@
     <string name="string_share">Share via</string>
     <string name="string_like">Liked</string>
     <string name="string_dislike">Disliked</string>
+    <string name="string_search_not_found">Search not found</string>
+    <string name="string_empty_history">No Purchased History</string>
 </resources>

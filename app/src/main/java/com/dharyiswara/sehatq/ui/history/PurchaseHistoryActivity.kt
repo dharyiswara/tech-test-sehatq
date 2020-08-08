@@ -4,6 +4,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dharyiswara.sehatq.R
 import com.dharyiswara.sehatq.database.ProductRealm
 import com.dharyiswara.sehatq.helper.base.BaseActivity
+import com.dharyiswara.sehatq.helper.extension.gone
+import com.dharyiswara.sehatq.helper.extension.visible
 import com.dharyiswara.sehatq.ui.detail.DetailProductActivity
 import com.dharyiswara.sehatq.ui.history.adapter.ProductAdapter
 import io.realm.Realm
@@ -32,7 +34,13 @@ class PurchaseHistoryActivity : BaseActivity() {
             layoutManager = LinearLayoutManager(this@PurchaseHistoryActivity)
             adapter = productAdapter
         }
-        productAdapter.addData(product)
+
+        if (product.isNotEmpty()) {
+            tvEmptyPurchased.gone()
+            productAdapter.addData(product)
+        } else {
+            tvEmptyPurchased.visible()
+        }
     }
 
     override fun initEvent() {

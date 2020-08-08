@@ -6,7 +6,9 @@ import android.view.inputmethod.EditorInfo
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dharyiswara.sehatq.R
 import com.dharyiswara.sehatq.helper.base.BaseActivity
+import com.dharyiswara.sehatq.helper.extension.gone
 import com.dharyiswara.sehatq.helper.extension.hideKeyboard
+import com.dharyiswara.sehatq.helper.extension.visible
 import com.dharyiswara.sehatq.model.ProductPromo
 import com.dharyiswara.sehatq.ui.detail.DetailProductActivity
 import com.dharyiswara.sehatq.ui.history.adapter.ProductAdapter
@@ -61,6 +63,7 @@ class SearchActivity : BaseActivity() {
             override fun afterTextChanged(s: Editable?) {
                 s?.let {
                     if (it.isEmpty()) {
+                        tvEmptySearch.gone()
                         productAdapter.clearData()
                     } else {
                         val list = mutableListOf<ProductPromo>()
@@ -68,7 +71,14 @@ class SearchActivity : BaseActivity() {
                             if (product.title.contains(it.toString(), true))
                                 list.add(product)
                         }
-                        productAdapter.replaceData(list)
+
+                        if (list.isNotEmpty()) {
+                            tvEmptySearch.gone()
+                            productAdapter.replaceData(list)
+                        } else {
+                            productAdapter.clearData()
+                            tvEmptySearch.visible()
+                        }
                     }
                 }
             }
