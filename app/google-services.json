@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "310521681582",
+    "firebase_url": "https://tech-test-sehatq.firebaseio.com",
+    "project_id": "tech-test-sehatq",
+    "storage_bucket": "tech-test-sehatq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310521681582:android:406c03dca3aa59a6257f3f",
+        "android_client_info": {
+          "package_name": "com.dharyiswara.sehatq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310521681582-ue2ahboq06cu6mtbornrivtsiemp83p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dharyiswara.sehatq",
+            "certificate_hash": "1f8b30758cfad7228b931c6f84d06e1a15f32709"
+          }
+        },
+        {
+          "client_id": "310521681582-pi6ep497r1mfqohhgn5p6rdi5cmkro01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIutmMICBaFflLL-uJzV-lrhdJl3NVYok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310521681582-pi6ep497r1mfqohhgn5p6rdi5cmkro01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

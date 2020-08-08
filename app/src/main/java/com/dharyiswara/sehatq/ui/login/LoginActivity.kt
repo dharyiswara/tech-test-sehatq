@@ -164,7 +164,6 @@ class LoginActivity : BaseActivity() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestId()
             .requestIdToken(getString(R.string.default_web_client_id))
-            .requestServerAuthCode(getString(R.string.default_web_client_id))
             .requestScopes(Scope(PROFILE))
             .requestEmail()
             .build()
