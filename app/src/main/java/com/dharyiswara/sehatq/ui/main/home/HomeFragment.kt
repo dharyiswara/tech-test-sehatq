@@ -7,9 +7,11 @@ import com.dharyiswara.sehatq.helper.base.BaseFragment
 import com.dharyiswara.sehatq.helper.extension.gone
 import com.dharyiswara.sehatq.helper.extension.visible
 import com.dharyiswara.sehatq.model.Homepage
+import com.dharyiswara.sehatq.ui.detail.DetailProductActivity
 import com.dharyiswara.sehatq.ui.main.home.adapter.CategoryAdapter
 import com.dharyiswara.sehatq.ui.main.home.adapter.ProductHomeAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
 import org.koin.android.ext.android.inject
 
@@ -21,7 +23,9 @@ class HomeFragment : BaseFragment() {
 
     private val productAdapter by lazy {
         ProductHomeAdapter {
-            toast("Go To Detail Product")
+            startActivity<DetailProductActivity>(
+                DetailProductActivity.PRODUCT to it
+            )
         }
     }
 
