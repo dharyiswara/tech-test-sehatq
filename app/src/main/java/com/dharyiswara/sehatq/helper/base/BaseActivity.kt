@@ -35,6 +35,10 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         displayMessage(getString(R.string.error_no_internet))
     }
 
+    override fun onError(throwable: Throwable?) {
+        displayMessage(getString(R.string.error_general))
+    }
+
     private fun displayMessage(message: String?) {
         getParentViewGroup()?.let { vg ->
             message?.let { Snackbar.make(vg, it, Snackbar.LENGTH_SHORT).show() }

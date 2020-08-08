@@ -1,4 +1,4 @@
-package com.dharyiswara.sehatq.ui
+package com.dharyiswara.sehatq.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
