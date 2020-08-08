@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SehatQ Test</string>
+
+    <string name="error_no_internet">Koneksi terputus</string>
 </resources>
